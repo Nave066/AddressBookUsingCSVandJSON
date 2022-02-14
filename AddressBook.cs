@@ -24,10 +24,49 @@ namespace AddressBookUsingCSVandJSON
             listPersonInCity.ForEach(x => Console.WriteLine("{0}\t", x.Name.ToString()));
 
         }
+
         //UC2 to add person name using console
         public static void AddPerson(List<Person> listPersonInCity)
         {
             listPersonInCity.Add(new Person());
+        }
+
+        //UC3 Edit person details 
+        public static Person find(string Name)
+        {
+            List<Person> listPersonInCity;
+            listPersonInCity = new List<Person>();
+            AddRecords(listPersonInCity);
+
+            Person PersonFind = listPersonInCity.Find((StoringVariable) => StoringVariable.Name == Name);
+            if (PersonFind != null)
+            {
+                Console.WriteLine("Name Found");
+                Console.WriteLine("Edit this details:");
+                Console.WriteLine("SSN :");
+                string SSN = Console.ReadLine();
+                Console.WriteLine("Address :");
+                string Address = Console.ReadLine();
+                Console.WriteLine("City:");
+                string City = Console.ReadLine();
+                Console.WriteLine("State:");
+                string State = Console.ReadLine();
+                listPersonInCity.ForEach(x => Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}", x.Name.ToString(), x.SSN.ToString(), x.Address.ToString(), x.City.ToString(), x.State.ToString())); ;
+
+            }
+            else
+            {
+                Console.WriteLine("No record found for the name" + Name);
+
+            }
+            return PersonFind;
+        }
+        public static void edit(List<Person> listPersonInCity)
+
+        {
+            Console.WriteLine("enter name to edit");
+            string Name = Console.ReadLine();
+            AddressBook.find(Name);
         }
     }
 }
