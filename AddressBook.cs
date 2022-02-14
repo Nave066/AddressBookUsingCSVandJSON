@@ -68,5 +68,17 @@ namespace AddressBookUsingCSVandJSON
             string Name = Console.ReadLine();
             AddressBook.find(Name);
         }
+
+        //UC4 delete persons name using Console
+        public static void DeletepersonName(List<Person> listPersonInCity)
+        {
+            Console.WriteLine("Enter name to be delete");
+            string Name = Console.ReadLine();
+            listPersonInCity.RemoveAll(e => e.Name == Name);
+            // Console.WriteLine(listPersonInCity.ToString());
+            Console.WriteLine("List After deletion of " + Name);
+            listPersonInCity.ForEach(x => Console.WriteLine("{0}\t", x.Name.ToString()));
+
+        }
     }
 }
