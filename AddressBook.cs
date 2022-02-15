@@ -83,6 +83,7 @@ namespace AddressBookUsingCSVandJSON
 
         //UC5 and 6 are done already as the multiple contacts are added in the addressbook
 
+        //UC7 Checking for dupicate entry
         public static void duplicateentry(List<Person> listPersonInCity)
         {
             Console.WriteLine("enter name to check duplicae entry");
@@ -96,7 +97,7 @@ namespace AddressBookUsingCSVandJSON
                 Console.WriteLine("no duplicate entry for this name");
             }
         }
-
+        //uc8 ,uc9 ,uc 10 to search multiple persons in same city or state
         public static void SameCityStateMates(List<Person> listPersonInCity)
         {
             Console.WriteLine("enter city to search  person in it");
@@ -110,5 +111,7 @@ namespace AddressBookUsingCSVandJSON
             }
 
         }
+
+
     }
 }
