@@ -82,5 +82,19 @@ namespace AddressBookUsingCSVandJSON
         }
 
         //UC5 and 6 are done already as the multiple contacts are added in the addressbook
+
+        public static void duplicateentry(List<Person> listPersonInCity)
+        {
+            Console.WriteLine("enter name to check duplicae entry");
+            string Name = Console.ReadLine();
+            if (listPersonInCity.Count(x => x.Name == Name) > 1)
+            {
+                Console.WriteLine(" there is duplicate entry for this name for " + listPersonInCity.Count(x => x.Name == Name) + "times");
+            }
+            else
+            {
+                Console.WriteLine("no duplicate entry for this name");
+            }
+        }
     }
 }
