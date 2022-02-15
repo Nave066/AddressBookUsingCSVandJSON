@@ -1,0 +1,5 @@
+﻿SSN,Name,Address,City,State
+01,Naveen,Senthilnagar,Chennai,Tamilnadu
+02,Kavin,StanleyCollege,Chennai,Tamilnadu
+03,Guhan,PGMC,Pudhukottai,Tamilnadu
+04,Radhika,Vengayapalli,Tirupathur,Tamilnadu
