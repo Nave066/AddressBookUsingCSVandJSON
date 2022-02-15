@@ -129,5 +129,22 @@ namespace AddressBookUsingCSVandJSON
                 Console.WriteLine(person.Name);
             }
         }
+        //UC12 Sorting the Addressbook by city
+        public static void SortDatabyCity(List<Person> listPersonInCity)
+        {
+
+            listPersonInCity.Sort(delegate (Person x, Person y)
+            {
+                if (x.City == null && y.City == null) return 0;
+                else if (x.City== null) return -1;
+                else if (y.City == null) return 1;
+                else return x.City.CompareTo(y.City);
+            });
+            Console.WriteLine("after sorting by name");
+            foreach (Person person in listPersonInCity)
+            {
+                Console.WriteLine(" {0}\t {1} ", person.City, person.City);
+            }
+        }
     }
 }
